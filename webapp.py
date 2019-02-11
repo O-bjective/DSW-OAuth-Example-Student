@@ -60,7 +60,7 @@ def authorized():
             session['github_token'] = (esp['access_token'], '')
             session['user_data'] = guthub.get('user').data
             message='You were successfully logged in as ' + session['user.data']['login']
-        except Exception as in inst:
+        except Exception as inst:
             session.clear()
             message='Unable to login. Please try again later.'
 

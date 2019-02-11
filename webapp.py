@@ -58,8 +58,11 @@ def authorized():
         try:
             #save user data and set log in message
             session['github_token'] = (resp['access_token'], '')
+            print(one)
             session['user_data'] = github.get('user_data')
+            print(two)
             message='You were successfully logged in as ' + session['user_data']['login']
+            print(three)
         except Exception as inst:
             session.clear()
             message='Unable to login. Please try again later.'

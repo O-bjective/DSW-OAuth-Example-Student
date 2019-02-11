@@ -57,6 +57,7 @@ def authorized():
     else:
         try:
             #save user data and set log in message
+            print(uno)
             session['github_token'] = (resp['access_token'], '')
             print(one)
             session['user_data'] = github.get('user_data')

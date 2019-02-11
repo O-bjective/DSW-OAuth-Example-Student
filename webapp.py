@@ -62,7 +62,7 @@ def authorized():
             print("one")
             session['user_data'] = github.get('user_data')
             print("two")
-            message='You were successfully logged in as ' + session['user_data']['login']
+            message = 'You were successfully logged in as ' #+ session['user_data']['login']
             print("three")
         except Exception as inst:
             session.clear()

@@ -61,7 +61,6 @@ def authorized():
             session['user_data'] = guthub.get('user').data
             message='You were successfully logged in as ' + session['user.data']['login']
         except Exception as in inst:
-            #clear the session and give error message
             session.clear()
             message='Unable to login. Please try again later.'
 
